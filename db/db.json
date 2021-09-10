@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Duke",
+      "location": []
+    },
+    {
+      "id": 2,
+      "username": "Maureen",
+      "location": []
+    },
+    {
+      "username": "a",
+      "id": 3,
+      "location": []
+    },
+    {
+      "username": "a",
+      "location": [],
+      "id": 4
+    }
+  ]
+}

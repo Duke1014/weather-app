@@ -5,7 +5,7 @@ export default function About() {
         <div>
             Created by: Brett "Duke" Norsworthy
             <br></br>
-            API used: <a href='https://www.metaweather.com/'>Meta Weather</a>        
+            API used: <a href='https://github.com/robertoduessmann/weather-api'>Weather API</a>        
         </div>
     )
 }
