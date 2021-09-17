@@ -1,21 +1,28 @@
 import React, {useState} from 'react'
 
-export default function Signup() {
+export default function Signup({setUserData}) {
     
-    const [username, setUsername] = useState("")
+    const [login, setLogin] = useState("")
+    const [error, setError] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:3000/users', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({username: username, location: []})
-        }).then(r =>r.json()).then(data => {
-            console.log(data)
+        
+        fetch("http://localhost:3000/users/")
+        .then(r => r.json()).then((data) => {
+            const user = data.find(u => u.username === login)
+            if (user) {
+                setError("Username already in use, please try another one.")
+            } else {              
+                fetch('http://localhost:3000/users', {
+                    method: "POST",
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({username: login, location: []})
+                }).then(r =>r.json()).then((data) => {
+                    setUserData(data)
+                })
+            }            
         })
-        // this should ADD information to db.json to use later
     }
     
     return (
@@ -25,27 +32,17 @@ export default function Signup() {
                     Username: <input 
                         type="text" 
                         name="name" 
-                        value={username}
-                        onChange={e => setUsername(e.target.value)} 
+                        value={login}
+                        onChange={e => setLogin(e.target.value)} 
                     />
                     <input type="submit"></input>
                 </label>
             </form>
+            <div>
+                {error}
+            </div>
         </div>
     )
 }
 
 
-/*
-edititing existing data
-use patch request
-
-fetch(`http://localhost:3000/users/{id}`, {
-
-method: "PATCH",
-headers: {"Content-Type": "application/json"},
-body: JSON.strigify({ whatever info is being updated })
-})
-
-
-*/

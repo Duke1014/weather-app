@@ -3,22 +3,19 @@
     {
       "id": 1,
       "username": "Duke",
-      "location": []
+      "location": [
+        "New York City",
+        "Houston",
+        "Chicago",
+        "London"
+      ]
     },
     {
       "id": 2,
       "username": "Maureen",
-      "location": []
-    },
-    {
-      "username": "a",
-      "id": 3,
-      "location": []
-    },
-    {
-      "username": "a",
-      "location": [],
-      "id": 4
+      "location": [
+        "Houston"
+      ]
     }
   ]
 }
