@@ -75,13 +75,12 @@ export default function Weather( {userData, setUserData} ) {
                             {weather.description}
                         </div>
                         { inTheList ? null :
-                        <button onClick={handleAdd}>Add</button>
-}
+                        <button onClick={handleAdd}>Add</button> }
                     </>}
                 </div>
             <br></br>
             <div className="search-box">
-                <form onSubmit={handleSubmit}>
+                <form className="search-form" onSubmit={handleSubmit}>
                     <label>Search a city:</label>
                     <input 
                         type="text"
@@ -98,7 +97,7 @@ export default function Weather( {userData, setUserData} ) {
                 </form>
             </div>
             <div className="locations">
-            {userData.location ? <div>Your saved locations: <br></br>
+            { userData.location ? <div>Your saved locations: <br></br>
                  {currentLocationElements}</div> : <></> }
             </div>
         </div>

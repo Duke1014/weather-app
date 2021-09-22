@@ -1,0 +1,55 @@
+.weather {
+  text-align: center;
+  padding: 10px;
+  /* background-position: url{'image url goes here'};
+  background-size: cover;
+  background-position: bottom; 
+  transition: 0.4 ease-out;*/
+}
+
+.search-bar {
+  width: auto;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.home-button {
+  display: block;
+  padding: 10px;
+  background-color: rgba(121, 155, 219, 0.493);
+  background-position: auto;
+  border-radius: 8px;
+  width: 55px;
+  font-size: 16pt;
+  font-family: sans-serif;
+}
+
+.about-button {
+  display: block;
+  padding: 10px;
+  background-color: rgba(121, 155, 219, 0.493);
+  background-position: auto;
+  border-radius: 8px;
+  width: 55px;
+  font-size: 16pt;
+  font-family: sans-serif;
+}
+
+.users-button {
+  display: block;
+  padding: 10px;
+  background-color: rgba(121, 155, 219, 0.493);
+  background-position: auto;
+  border-radius: 8px;
+  width: 55px;
+  font-size: 16pt;
+  font-family: sans-serif;
+}
+
+.submit {
+  padding: 2px;
+  border-radius: 10px;
+  display: block;
+}

@@ -4,6 +4,8 @@ import Home from './Home'
 import About from './About'
 import Users from './Users'
 
+import './App.css'
+
 export default function App() {
   return (
     <Router>
@@ -11,13 +13,13 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="home-button">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" className="about-button">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users" className="users-button">Users</Link>
             </li>
           </ul>
         </nav>
