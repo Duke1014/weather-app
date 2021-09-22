@@ -1,10 +1,12 @@
+.app {
+  background-image: url('./img/sky.jpg');
+  background-size: auto;
+  background-position: center;
+}
+
 .weather {
   text-align: center;
   padding: 10px;
-  /* background-position: url{'image url goes here'};
-  background-size: cover;
-  background-position: bottom; 
-  transition: 0.4 ease-out;*/
 }
 
 .search-bar {
